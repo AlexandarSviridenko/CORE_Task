@@ -3,10 +3,10 @@ package Task20;
 import java.util.Objects;
 
 public class Singleton1 {
-    int one;
-    int two;
-    int three;
-    static Singleton1 singleton1 = new Singleton1();
+    private static final Singleton1 INSTANCE = new Singleton1();
+    private final int one;
+    private final int two;
+    private final int three;
 
     public Singleton1() {
         one = 1;
@@ -15,7 +15,7 @@ public class Singleton1 {
     }
 
     public static Singleton1 instance() {
-        return singleton1;
+        return INSTANCE;
     }
 
     public String toString() {

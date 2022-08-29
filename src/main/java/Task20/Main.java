@@ -10,7 +10,7 @@ public class Main {
 
     public static Thread[] initThread(){
         Thread[] threads = new Thread[3];
-        Runnable runnable = () -> System.out.println(Singleton2.instance());
+        Runnable runnable = () -> System.out.println(Singleton1.instance());
 
         threads[0] = new Thread(runnable);
         threads[1] = new Thread(runnable);
